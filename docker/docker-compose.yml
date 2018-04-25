@@ -1,0 +1,23 @@
+version: "3.3"
+
+services:
+  api:
+    container_name: api
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ./:/src
+    networks:
+      - papernest
+    environment:
+      - LOGGING_LEVEL=DEBUG
+    ports:
+      - "8080:8080"
+    command: >
+      gunicorn --log-level debug --access-logfile - --capture-output --workers 4 --reload --bind 0.0.0.0:8080 wsgi:api
+
+networks:
+  papernest:
+    external:
+      name: papernest

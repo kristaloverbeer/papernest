@@ -1,0 +1,5 @@
+{
+  "tests/unit/repository/test_coverage_repository.py::test_should_return_correctly_formatted_coverage_information_given_queried_address": true,
+  "tests/unit/repository/test_coverage_repository.py::test_should_return_correctly_formatted_coverage_information_given_queried_address[84 rue vnzonvon, 75011 Paris-expected_metadata3]": true,
+  "tests/unit/repository/test_coverage_repository.py::test_should_return_correctly_formatted_coverage_information_given_queried_address[84 rue vnzonvon, 81012-expected_metadata3]": true
+}
